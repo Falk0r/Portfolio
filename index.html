@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bac71461de.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Geoffrey Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="banner" id="banner">
+            <div class="photo">
+                <img src="./public/images/profil2.jpg" alt="">
+            </div> 
+        </div>
+        <div class="scripting">
+            <pre id="typewriter">
+                <span class="var-highlight">var</span> object = {
+                    name: <span class="string-highlight">'Geoffrey Sorriaux'</span>,
+                    type: <span class="string-highlight">'Developpeur Web'</span>,
+                    location: <span class="string-highlight">'Lyon'</span>,
+                    properties:[<span class="string-highlight">'Javascript'</span>,
+                                <span class="string-highlight">'PHP'</span>,
+                                <span class="string-highlight">'HTML'</span>,
+                                <span class="string-highlight">'CSS'</span>,
+                                <span class="string-highlight">'et bien plus...'</span>];
+                    }; 
+            </pre>
+        </div>
+        
+    </header>
+    <div class="navigation">
+        <div class="menu">
+            <div class="hamburger">
+                <div class="ligne"></div>
+            </div>
+            <ul>
+                <li><a href="#about">A propos<i class="fas fa-user"></i></a></li>
+                <li><a href="#experiences">Expériences<i class="fas fa-chart-line"></i></a></li>
+                <li><a href="#projects">Projets<i class="far fa-folder-open"></i></a></li>
+                <li><a href="#skills">Compétences<i class="fas fa-laptop-code"></i></a></li>
+                <li><a href="#certifications">Certifications<i class="fas fa-award"></i></a></li>
+                <li><a href="#studies">Etudes<i class="fas fa-chalkboard-teacher"></i></a></li>
+                <li><a href="#contact">Contact<i class="far fa-paper-plane"></i></a></li>
+                <li><a href="#">Curiculum Vitae<i class="fas fa-file-pdf"></i></a></li>
+            </ul>
+        </div>
+        <div class="titre">
+            <h1>Developpeur Web</h1>
+        </div>
+        <div class="logo">
+            <a href="#banner">
+                <p>Geoffrey Sorriaux</p>
+                <p class="undertitle">Développeur Web</p>
+            </a>
+        </div>
+    </div>
+    <section class="about">
+
+        <div class="about-me" id="about">
+            <div class="citation">
+                <i class="fas fa-quote-right"></i>
+                <h2 >J'ai troqué les écritures en T pour les écritures scriptés.</h2>                
+            </div>
+            <div class="about-content">
+                <p>Auparavant Comptable, j'ai effectué avec succès une réconversion professionnelle en tant que Développeur Web. Ma passion pour l'informatique et mon acharnement m'ont permis d'accomplir à bien ce projet</p>
+                <p>Je m'épanouie maintenant à construire le web d'aujourd'hui et de faire partie des batisseurs 2.0</p>
+                <p>Le développement permet de me sentir utile aux travers de projets et de visions des personnes me faisant confiance au quotidien.</p>
+                <p>Pourquoi pas les vôtres ?</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="experience" id="experiences">
+        <h2>Mes expériences</h2>
+        <div class="firstCube"></div>
+        <div class="secondCube"></div>
+
+        <div class="card">
+            <div class="card-banner">
+                <img src="./public/images/weedoit_logo.png" alt="">
+                <p>Weedoit</p>
+                <p>Aide comptable</p>
+            </div>
+        </div>
+        
+    </section>
+    <section class="experience">
+        <div class="thirdCube"></div>
+        <div class="fourthCube"></div>
+        
+
+        <div class="card">
+            <div class="card-banner">
+                <img id="dtv"src="./public/images/droidtvfr.jpg" alt="">
+                <p>Droid-TV</p>
+                <p>Co-fondateur</p>
+            </div>
+        </div>
+    </section>
+    <section class="experience">
+        <div class="firstCube"></div>
+        <div class="secondCube fifthCube"></div>
+
+        <div class="card">
+            <div class="card-banner">
+                <img id="veolia"  src="./public/images/veolia.png" alt="">
+                <p>Veolia</p>
+                <p>Comptable fournisseur</p>
+            </div>
+        </div>
+        
+    </section>
+    <section class="project" id="projects">
+        <div class="project-banner">
+            <h2>Mes projets</h2>
+            <div class="box">
+                <div><i class="fas fa-cog"></i></div>
+                <div><i class="fas fa-atom"></i></div>
+                <div><i class="fas fa-cog"></i></div>
+                <div><i class="fas fa-sync"></i></div>
+                <div><i class="fas fa-at"></i></div>
+                <div><i class="fas fa-atom"></i></div>
+                <div><i class="fas fa-sync"></i></div>
+                <div><i class="fas fa-at"></i></div>
+                <div><i class="fas fa-cog"></i></div>
+                <div><i class="fas fa-atom"></i></div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-project" id="joke98">
+                <div class="card-project-front rotate2">
+                    <div class="card-image">
+                    </div>                
+                    <div class="card-content">
+                        <div class="card-title">
+                            <div class="title">Joke98</div>
+                            <div class="more"><i class="fas fa-ellipsis-v" onclick="turn(joke98)"></i></div>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                Application avec connexion API et utilisation de css "exotique".
+                            </p>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class="card-project-back rotate">
+                    <div class="card-title">
+                        <div class="title">Joke98</div>
+                        <div class="close"><i class="fas fa-times" onclick="turn(joke98)"></i></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-project" id="epure">
+                <div class="card-project-front rotate2">
+                    <div class="card-image">
+                    </div>                
+                    <div class="card-content">
+                        <div class="card-title">
+                            <div class="title">Joke98</div>
+                            <div class="more"><i class="fas fa-ellipsis-v" onclick="turn(epure)"></i></div>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                Application avec connexion API et utilisation de css "exotique".
+                            </p>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class="card-project-back rotate">
+                    <div class="card-title">
+                        <div class="title">Joke98</div>
+                        <div class="close"><i class="fas fa-times" onclick="turn(epure)"></i></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project2">        
+        <div class="card-project" id="cinemacabre">
+            <div class="card-project-front rotate2">
+                <div class="card-image">
+                </div>                
+                <div class="card-content">
+                    <div class="card-title">
+                        <div class="title">Joke98</div>
+                        <div class="more"><i class="fas fa-ellipsis-v" onclick="turn(cinemacabre)"></i></div>
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            Application avec connexion API et utilisation de css "exotique".
+                        </p>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="card-project-back rotate">
+                <div class="card-title">
+                    <div class="title">Joke98</div>
+                    <div class="close"><i class="fas fa-times" onclick="turn(cinemacabre)"></i></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="card-project" id="other">
+            <div class="card-project-front rotate2">
+                <div class="card-image">
+                </div>                
+                <div class="card-content">
+                    <div class="card-title">
+                        <div class="title">Joke98</div>
+                        <div class="more"><i class="fas fa-ellipsis-v" onclick="turn(other)"></i></div>
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            Application avec connexion API et utilisation de css "exotique".
+                        </p>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="card-project-back rotate">
+                <div class="card-title">
+                    <div class="title">Joke98</div>
+                    <div class="close"><i class="fas fa-times" onclick="turn(other)"></i></div>
+
+                </div>
+            </div>
+        </div>       
+    </section>
+    <section class="skills" id="skills">
+        <div class="skills-banner">
+            <h2>Compétences</h2>
+        </div>
+        <div class="skills-cards">
+            <div class="skills-card">
+                <div class="skills-card-title">
+                    <p>HTML - CSS</p>
+                    <hr>
+                </div>
+                <div class="skills-card-content">
+                    <div class="techno">
+                        <img src="./public/images/html5.png" alt="HTML5">
+                        HTML5
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/css3.png" alt="CSS3">
+                        CSS3
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/bootstrap.png" alt="BOOTSTRAP">
+                        BOOTSTRAP
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/bulma.png" alt="BULMA">
+                        BULMA
+                    </div>     
+                </div>                
+            </div>
+        </div>
+        <div class="skills-cards">
+            <div class="skills-card">
+                <div class="skills-card-title">
+                    <p>JAVASCRIPT</p>
+                    <hr>
+                </div>
+                <div class="skills-card-content">
+                    <div class="techno">
+                        <img src="./public/images/javascript.png" alt="JAVSCRIPT">
+                        JAVASCRIPT
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/jquery.png" alt="JQUERY">
+                        JQUERY
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/react.png" alt="REACT">
+                        REACT
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/vuejs.png" alt="vuejs">
+                        VUE
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/nodejs.png" alt="nodejs">
+                        NODE JS
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/expressjs.png" alt="expressjs">
+                        EXPRESS
+                    </div>        
+                </div>                
+            </div>
+        </div>
+        <div class="skills-cards">
+            <div class="skills-card">
+                <div class="skills-card-title">
+                    <p>BACK-END</p>
+                    <hr>
+                </div>
+                <div class="skills-card-content">
+                    <div class="techno">
+                        <img src="./public/images/php.png" alt="PHP">
+                        PHP
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/laravel.png" alt="LARAVEL">
+                        LARAVEL
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/python.png" alt="PYTHON">
+                        PYTHON
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/django.png" alt="django">
+                        DJANGO
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/mysql.png" alt="mysql">
+                        MYSQL
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/sqlite.png" alt="sqlite">
+                        SQLITE
+                    </div>        
+                </div>                
+            </div>
+        </div>
+        <div class="skills-cards">
+            <div class="skills-card">
+                <div class="skills-card-title">
+                    <p>DIVERS</p>
+                    <hr>
+                </div>
+                <div class="skills-card-content">
+                    <div class="techno">
+                        <img src="./public/images/wordpress.png" alt="wordpress">
+                        WORDPRESS
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/heroku.png" alt="heroku">
+                        HEROKU
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/Virtualbox.png" alt="virtualbox">
+                        VIRTUALBOX
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/docker.png" alt="docker">
+                        DOCKER
+                    </div>
+                    <div class="techno" id="mysql" >
+                        <img src="./public/images/github.png" alt="github">
+                        GITHUB
+                    </div>
+                    <div class="techno">
+                        <img src="./public/images/photoshop.png" alt="photoshop">
+                        PHOTOSHOP   
+                    </div>        
+                </div>                
+            </div>
+        </div>
+    </section>
+    <section class="certifications" id="certifications" >
+        <div class="certifications-banner">Certifications</div>
+        <div class="certifications-content">
+            <img v-bind:src="certifs[counter].path">
+            <div class="commands">
+                <button @click="precedent">Précedent</button>
+                <a v-if="width > 715" :href="certifs[counter].url"><button>Voir le cours</button></a>
+                <button @click="next">Suivant</button>
+            </div>
+            <div class="certification-describe" v-if="width <= 715">
+                <div class="title">
+                    <h3>{{ certifs[counter].title }}</h3>
+                </div>                
+                <p>Obtenu le {{ certifs[counter].obtention }}</p>
+                <p>Certificat n°{{ certifs[counter].number }}</p>
+                <a :href="certifs[counter].url"><button>Voir le cours</button></a>                
+            </div>
+        </div>
+    </section>
+    <section class="studies" id="studies">
+        <div class="studies-banner">Diplômes</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 255"><path fill="#0099ff" fill-opacity="1" d="M0,128L48,149.3C96,171,192,213,288,234.7C384,256,480,256,576,245.3C672,235,768,213,864,181.3C960,149,1056,107,1152,112C1248,117,1344,171,1392,197.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+        <div class="studies-content">
+            <graduate v-for="mygraduate in mygraduates" :key="mygraduate.id" v-bind:mygraduate="mygraduate"></graduate>
+        </div>
+             
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-banner">Me contacter</div>
+        <div class="contact-photo">
+            <div class="card-contact">
+                <div class="card-title"><a href="mailto:sorriaux.geoffrey@hotmail.fr"><i class="far fa-envelope"></i></a></div>
+                <hr>
+                <div class="mail">
+                    
+                    <a href="mailto:sorriaux.geoffrey@hotmail.fr">sorriaux.geoffrey@hotmail.fr</a>
+                </div>
+            </div>
+            <div class="card-contact">
+                <div class="card-title"><a href="https://www.linkedin.com/in/geoffrey-sorriaux-8b25477b/"><i class="fab fa-linkedin"></i></a></div>
+                <hr>
+                <div class="Linkedin">
+                    
+                    <a href="https://www.linkedin.com/in/geoffrey-sorriaux-8b25477b/">geoffrey-sorriaux-8b25477b/</a>
+                </div>
+            </div>
+            <div class="card-contact">
+                <div class="card-title"><a href="https://github.com/Falk0r"><i class="fab fa-github-square"></a></i></div>
+                <hr>
+                <div class="github">
+                    
+                    <a href="https://github.com/Falk0r">Mon Github : Falk0r</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script  src="./script.js"></script>
+<script src="./vue.js"></script>
+</html>

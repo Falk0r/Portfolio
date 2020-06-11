@@ -1,0 +1,965 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+}
+header{
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+section{
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+i{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.banner{
+    height: 40vh;
+    width: 100%;
+    background-image: url("./public/images/mbp2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: luminosity;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border-radius: 9999px;
+}
+.banner img{
+    height: 100%;
+    border-radius: 9999px;
+}
+.scripting{
+    height: 60vh;
+}
+.var-highlight {
+    color: #C0AD60;
+}
+.string-highlight {
+color: rgba(253, 149, 90, 0.8);
+}
+
+#typewriter {
+font-size: 2em;
+margin: 0;
+margin-top: 20px;
+font-family: "Courier New";
+background-color: black;
+position: absolute;
+transform: translate(-50%);
+left: 30%;
+}
+#typewriter:after {
+content: "|";
+-webkit-animation: blink 250ms linear infinite alternate;
+        animation: blink 250ms linear infinite alternate;
+}
+
+.about{
+    height: 100vh;
+
+    box-shadow: 0 0 12px 12px ghostwhite;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.navigation{
+    height: 10vh;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo{
+    height: 10vh;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid lightgray;
+}
+.menu{
+    width: 20%;
+    height: 10vh;
+    border-right: 1px solid lightgray;
+}
+ul{
+    list-style: none;
+    height: 90vh;
+    width: 50%;
+    font-size: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    left: -360px;
+    border-right: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    transition: left 1000ms ease;
+}
+li{
+    margin-left: 20px;
+}
+li a i{
+    margin-left: 10px;
+    font-size: 25px;
+}
+.menu.active ul{
+    left: 0px;
+    transition: left 500ms ease;
+}
+.hamburger{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.ligne{
+    width: 45%;
+    height: 8px;
+    border-radius: 5px;
+    background: #333;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0ms 300ms;
+}
+.ligne::before{
+    content: '';
+    position: absolute;
+    bottom: 14px;
+    background: #333;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    transition: bottom 300ms 300ms ease, transform 300ms ease;
+
+}
+.ligne::after{
+    content: '';
+    position: absolute;
+    top: 14px;
+    background: #333;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    transition: top 300ms 300ms ease, transform 300ms ease;
+
+}
+.hamburger.active .ligne::after{
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms ease, transform 300ms 300ms ease;
+}
+.hamburger.active .ligne{
+    background: transparent;
+
+}
+.hamburger.active .ligne::before{
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms ease, transform 300ms 300ms ease;
+}
+
+
+
+.titre{
+    height: 10vh;
+    width: 60%;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.logo p{
+    width: 100%;
+    text-align: center;
+}
+.about-me{
+    height: 100vh;
+    background-color: whitesmoke;
+}
+.citation{
+    margin: 10px;
+    margin-top: 10vh;
+    padding: 10px;
+    background-color: lightgray;
+    border-left: green 8px solid;
+}
+.citation i{
+    color: grey;
+    margin-left: 20px;
+}
+.citation h2{
+    margin: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.about-me p{
+    font-size: 20px;
+    margin: 10px 50px;
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vh;
+}
+.experience{
+    background-color: #1d3557;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.firstCube{
+    height: 30vh;
+    width: 30%;
+    background-color: #a8dadc;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+}
+.secondCube{
+    height: 40vh;
+    width: 40vh;
+    background-color: #f1faee;
+    position: absolute;
+    top: 250vh;
+    right: 0;
+    z-index: 1;
+}
+.experience h2{
+    background-color: #e63946;
+    z-index: 2;
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: #f1faee;
+    z-index: 10;
+}
+.card{
+    width: 80%;
+    height: 75vh;
+    background-color: #457b9d;
+    z-index: 20;
+    margin-top: 10vh;
+}
+.card-banner{
+    height: 10vh;
+    width: 100%;
+    background-color: #e63946;
+    color: #f1faee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-banner img{
+    height: 5vh;
+    margin-left: 2vh;
+}
+.card-banner p{
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+.fourthCube{
+    height: 30vh;
+    width: 30%;
+    background-color: #a8dadc;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 370vh;
+}
+.thirdCube{
+    height: 40vh;
+    width: 200vh;
+    background-color: #f1faee;
+    position: absolute;
+    right: 40%;
+    z-index: 1;
+}
+.fifthCube{
+    top: 450vh;
+}
+#dtv, #veolia{
+    border-radius: 10px;
+}
+.project-banner{
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    text-align: center;
+}
+.project-banner h2{
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    width: 100%;
+
+}
+i{
+    margin: 0;
+}
+.box div{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    color: white;
+}
+.box div:nth-child(1){
+    top: 32%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(2){
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+.box div:nth-child(3){
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(4){
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(5){
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+.box div:nth-child(6){
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+.box div:nth-child(7){
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+.box div:nth-child(8){
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+.box div:nth-child(9){
+    top: 80%;
+    left: 30%;
+    animation: animate 5s linear infinite;
+}
+.box div:nth-child(10){
+    top: 36%;
+    left: 78%;
+    animation: animate 13s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+@-webkit-keyframes blink {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+@keyframes blink {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
+.project{
+    height: 150vh;
+}
+.project2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cards{
+    position: relative;
+    height: 110vh;
+    width: 100%;
+    top: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card-project{
+    height: 40vh;
+}
+.card-project img{
+    width: 100%;
+}
+.card-image{
+    background-image: url("./public/images/joke98.png");
+    background-size: cover;
+    height: 25vh;
+}
+.card-content{
+    height: 10vh;
+}
+
+.card-title{
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+.fa-ellipsis-v, .fa-times{
+    cursor: pointer;
+}
+.card-project-front{
+    height: 40vh;
+    width: 400px;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+}
+.card-project-back{
+    position: relative;
+    height: 40vh;
+    top: -40vh;
+    background-color: white;
+    /* opacity: 0; */
+}
+
+.rotate{
+    animation: flip-vertical-right 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+.rotate2{
+    animation: flip-vertical-right2 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes flip-vertical-right {
+    0% {
+        transform: rotateY(0);
+        z-index: 2;
+    }
+    100% {
+        transform: rotateY(180deg);
+        /* opacity: 0; */
+        z-index: 1;
+    }
+}
+@keyframes flip-vertical-right2 {
+    0% {
+        transform: rotateY(180deg);
+        z-index: 1;
+    }
+    100% {
+        transform: rotateY(0);
+        /* opacity: 1; */
+        z-index: 2;
+    }
+}
+.skills{
+    background-color: #f2f2f2;
+    height: 380vh;
+}
+.skills-banner{
+    height: 10vh;
+    box-shadow:  0px 21px 42px #cecece, 
+             -21px 21px 42px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills-banner h2{
+    font-size: 42px;
+    background: rgba(56,56,56,1);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.skills p{
+    font-size: 22px;
+    color: rgba(56,56,56,1);
+}
+.skills-cards{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.skills-card{
+    height: 70vh;
+    width: 75%;
+    border-radius: 50px;
+    box-shadow:  21px 21px 42px #cecece, 
+                -21px -21px 42px #ffffff;
+}
+.skills-card-title{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+hr{
+    width: 95%;
+}
+.skills-card-content{
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.techno{
+    height: 15vh;
+    width: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.techno img{
+    height: 100%;
+    width: 100%;
+}
+.certifications{
+    height: 100vh;
+    background-color: white;
+}
+
+.certifications-banner{
+    height: 10vh;
+    box-shadow:  0px -21px 30px #cecece, 
+             -21px 21px 42px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d3557;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+}
+.certifications-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+
+}
+.certifications-content img{
+    width: 100%;
+}
+.certif{
+    width: 25%;
+}
+.commands{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.certification-describe{
+    height: 35vh;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.certification-describe .title{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.certification-describe h3{
+    font-size: 20px;
+}
+.certification-describe p{
+    margin-top: 15px;
+}
+.certifications button{
+    cursor: pointer;
+    margin-top: 15px;
+    height: 44px;
+    min-width: 110px;
+    border: none;
+    border-radius: 9999px;
+    background-color: #1d3557;
+    color: white;
+    font-weight: bold;
+}
+.graduate {
+    margin-top: 0;
+    height: 25vh;
+    width: 90%;
+    background-color: white;
+}
+.studies{
+    height: 150vh;
+    background-image: url("./public/images/dot-grid.png");
+    background-repeat: repeat;
+}
+.studies-banner{
+    height: 10vh;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+}
+.studies-content{
+    width: 100%;
+    height: 125vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.graduate{
+    width: 80%;
+    height: 25vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px black solid;
+}
+.graduate-content{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.graduate h3{
+    padding-top: 1rem;
+    padding-bottom: 0.7rem;
+    text-align: center;
+}
+.graduate hr{
+    width: 90%;
+    margin: 5px 0 5px 0;
+}
+.graduate p, .graduate i{
+    margin: 0px 10px 0px 10px;
+}
+.graduate .fa-award{
+    display: block;
+    position: relative;
+    bottom: -10px;
+    font-size: 50px;
+    left: 45%;
+    color: red;
+}
+.contact{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-banner{
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.contact-photo{
+    height: 100vh;
+    width: 100%;
+    background-image: url("./public/images/lyon.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    mix-blend-mode: luminosity;
+    animation: paysage 120s linear infinite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-contact{
+    height: 20vh;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card-contact .card-title i{
+    font-size: 10vh;
+}
+
+@keyframes paysage{
+    0%{
+        background-position-x: 0%;
+    }
+    50%{
+        background-position-x: 100%;
+    }
+    100%{
+        background-position-x: 0%;
+    }
+}
+
+
+
+
+  
+
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* ----------------------MEDIA QUERIES--------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+
+
+
+@media screen and (max-width: 715px){
+    #typewriter{
+        font-size: 1em;
+    }
+    .banner{
+        height: 65vh;
+    }
+    .scripting{
+        height: 35px;
+    }
+    .undertitle{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    section{
+        width: 85%;
+        height: 100vh;
+        margin-left: 15%;
+    }
+    .banner{
+        width: 85%;
+        margin-left: 15%;
+    }
+    #typewriter{
+        left: 50%;
+    }
+    .about{
+        height: 100vh;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navigation{
+        border-right: 1px solid lightgrey;
+        height: 100vh;
+        width: 15%;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        position: fixed;
+
+    }
+    .hamburger{
+        display: none;
+    }
+    .menu{
+        width: 100%;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .menu ul{
+        width: 100%;
+        height: 80vh;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    li{
+        font-size: large;
+    }
+    .titre{
+        display: none;
+    }
+    .logo{
+        height: 20%;
+        width: 100%;
+        border-left: none;
+        border-bottom: 1px solid lightgray;
+    }
+    .about-me{
+        height: 100vh;
+        background-color: whitesmoke;
+        width: 100%;
+    }
+    .logo{
+        flex-direction: column;
+    }
+    .undertitle{
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .citation{
+        margin: 50px;
+    }
+    .citation h2{
+        font-size: 30px;
+    }
+    .about-me p{
+        font-size: 25px;
+    }
+    .project-banner{
+        width: 85%;
+    }
+    .project-banner h2{
+        top: 50%;
+        transform: translateY(-20px);
+    }
+    .project{
+        height: 100vh;
+    }
+    .cards{
+        height: 60vh;
+    }
+    .card-project{
+        height: 50vh;
+    }
+    .skills{
+        height: 200vh;
+    }
+    .skills-cards{
+        height: 45vh;
+    }
+    .skills-card{
+        height: 35vh;
+    }
+    .certifications-content img{
+        height: 80vh;
+        width: auto;
+    }
+    .commands{
+        align-items: flex-start;
+        height: 10vh;
+    }
+    .studies{
+        height: 100vh;
+    }
+    .studies-banner{
+        z-index: 2;
+        position: absolute;
+        left: 50%;
+    }
+    .studies-content{
+        height: 70vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .graduate{
+        width: 40%;
+    }
+    .contact-banner{
+        height: 0;
+    }
+    .card-contact{
+        height: 40vh;
+        width: 30%;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media screen and (max-width: 405px){
+    .about-content{
+        justify-content: center
+    }
+    .about-me p{
+        font-size: 18px;
+        margin: 10px 20px;
+    }
+}
+@media screen and (min-width: 500px){
+    ul{
+        font-size: 20px;
+    }
+}
