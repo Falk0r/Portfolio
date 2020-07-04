@@ -286,6 +286,19 @@ li a i{
     margin-left: 2vh;
     margin-right: 2vh;
 }
+.card .card-content{
+    height: 65vh;
+}
+.card .card-content .card-mission, .card .card-content .card-skill{
+    height: 32.5vh;
+}
+.card-mission h2, .card-skill h2{
+    background-color: transparent;
+    color: black;
+    text-align: left;
+    margin-left: 20px;
+    font-size: xx-large;
+}
 .fourthCube{
     height: 30vh;
     width: 30%;
@@ -433,7 +446,7 @@ i{
     top: 40vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -563,6 +576,7 @@ i{
     font-size: 42px;
     background: rgba(56,56,56,1);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .skills p{
@@ -932,6 +946,9 @@ hr{
     }
     .project{
         height: 100vh;
+    }
+    .project2{
+        height: 50vh;
     }
     .cards{
         height: 60vh;
