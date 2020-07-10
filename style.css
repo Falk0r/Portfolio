@@ -219,8 +219,11 @@ li a i{
     font-size: 20px;
 }
 .about-me p{
-    font-size: 20px;
+    font-size: 17px;
     margin: 10px 50px;
+}
+.about-me-text{
+    visibility: collapse;
 }
 .about-content{
     display: flex;
@@ -298,6 +301,11 @@ li a i{
     text-align: left;
     margin-left: 20px;
     font-size: xx-large;
+}
+.card-skill ul, .card-mission ul{
+    font-size: larger;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 .fourthCube{
     height: 30vh;
@@ -904,7 +912,7 @@ hr{
         justify-content: space-around;
         align-items: flex-start;
     }
-    li{
+    .nav li{
         font-size: large;
     }
     .titre{
@@ -936,6 +944,14 @@ hr{
     }
     .about-me p{
         font-size: 25px;
+    }
+    .about-me-text{
+        visibility: visible;
+    }
+    .card-skill li, .card-mission li{
+        font-size: 25px;
+        margin-left: 10%;
+        margin-top: 20px;
     }
     .project-banner{
         width: 85%;
